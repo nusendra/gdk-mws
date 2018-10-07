@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class='menu'>Menu</div>
+      <div class='sidebar'>
+        <img src="/images/photo.jpeg" alt="nusendra">
+      </div>
+      <div class='konten'><a href="/add2numbers.html">Menjumlahkan 2 angka</a></div>
+      <div id="mapid" class='konten'>
+      </div>
+      <div class='konten'>Konten 3</div>
+      <div class='footer'>Nusendra Hanggarawan</div>
+    </div>
+    <hr>
+    Tugas Optional
+    <div class="container2">
+      <div class="satu center-text">1</div>
+      <div class="dua center-text">2</div>
+      <div class="tiga center-text">3</div>
+      <div class="empat center-text">4</div>
+      <div class="lima center-text">5</div>
+      <div class="enam center-text">6</div>
+    </div>
+  </body>
+  <footer>
+    visit my real blog on <a href="https://nusendra.com">https://nusendra.com</a>
+  </footer>
+</html>
+<script>
+  var mymap = L.map('mapid').setView([-7.358354, 112.609767], 13);
+  L.marker([-7.358354, 112.609767]).addTo(mymap);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoibnVzZW5kcmEiLCJhIjoiY2ptNXBzZjJ3MGhzdjN2cnRlMnQzMXViMCJ9.e4QkJogqpJuL6rzcb-Ilew'
+  }).addTo(mymap);
+</script>
+<style>
+  #mapid { height: 180px; }
+  img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 30px 100px 100px 100px 30px;
+    grid-gap: 4px;
+    margin-bottom: 80px;
+  }
+  .container2 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 4px;
+  }
+  .menu {
+    background: lightblue;
+    grid-column: 1/5;
+  }
+  .sidebar {
+    background: lightyellow;
+    grid-row: 2/5;
+  }
+  .konten {
+    background: pink;
+    grid-column: 2/5;
+  }
+  .footer {
+    background: lime;
+    grid-column: 1/5;
+  }
+  .satu {
+    background: lightgreen;
+    grid-column: 1/3;
+  }
+  .dua {
+    background: yellow;
+    grid-column: 3/4;
+  }
+  .tiga {
+    background: lightseagreen;
+    grid-row: 2/4;
+  }
+  .empat {
+    background: magenta;
+    grid-column: 2/4;
+  }
+  .lima {
+    background: lightskyblue;
+    grid-column: 2/3;
+  }
+  .enam {
+    background: orangered;
+    grid-column: 3/4;
+  }
+  .center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+  }
+  </style>
