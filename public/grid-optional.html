@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tugas Optional - Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="main-title">
+        Mobile Web Specialist - GDK 2018
+        <br>
+        <span class="name">Nusendra. H</span>
+    </div>
+    <p></p>
+    <div class="container2">
+      <div class="satu center-text">1</div>
+      <div class="dua center-text">2</div>
+      <div class="tiga center-text">3</div>
+      <div class="empat center-text">4</div>
+      <div class="lima center-text">5</div>
+      <div class="enam center-text">6</div>
+    </div>
+</body>
+</html>
+
+<style>
+.container2 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 4px;
+    color: aliceblue;
+  }
+  .satu {
+    background: lightgreen;
+    grid-column: 1/3;
+  }
+  .dua {
+    background: yellow;
+    grid-column: 3/4;
+  }
+  .tiga {
+    background: lightseagreen;
+    grid-row: 2/4;
+  }
+  .empat {
+    background: magenta;
+    grid-column: 2/4;
+  }
+  .lima {
+    background: lightskyblue;
+    grid-column: 2/3;
+  }
+  .enam {
+    background: orangered;
+    grid-column: 3/4;
+  }
+  .center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+  }
+</style>
