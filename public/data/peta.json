@@ -1,0 +1,49 @@
+{
+    "places": [
+        {
+            "lokasi": [
+                -7.359985,
+                112.626317
+            ],
+            "sponsor": "Resto Spanyol",
+            "gambar": "../images/restospanyol.jpg",
+            "review": "restoran spanyol di jakarta yang dekat dengan kantor saya"
+        },
+        {
+            "lokasi": [
+                -7.358354,
+                112.609767
+            ],
+            "sponsor": "Warung Kopi",
+            "gambar": "../images/warkop.jpg",
+            "review": "warung kopi cita rasa yang sangat tinggi dengan harga yang murah"
+        },
+        {
+            "lokasi": [
+                -7.347716,
+                112.621662
+            ],
+            "sponsor": "Pondok Ikan Bakar",
+            "gambar": "../images/ikanbakar.jpg",
+            "review": "Ikan bakar kualitas tinggi, hampir gosong tapi belum"
+        },
+        {
+            "lokasi": [
+                -7.358354,
+                112.618767
+            ],
+            "sponsor": "STEAK cow",
+            "gambar": "../images/steak.jpg",
+            "review": "Steak lokal harga impor, 200gr dan 300gr mentah "
+        },
+        {
+            "lokasi": [
+                -7.3674415,
+                112.631142
+            ],
+            "sponsor": "Rupa-rupaSeafood!!",
+            "gambar": "../images/seafood.jpg",
+            "review": "seafood international lobster, king crabs, cumi, kerang, semua ada"
+        }
+    ]
+}

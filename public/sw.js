@@ -32,16 +32,40 @@ self.__precacheManifest = [
     "revision": "3775413e6073029e03735e10feda41e3"
   },
   {
+    "url": "data/peta.json",
+    "revision": "8e015945ad0003bf574b0bd1273d2b43"
+  },
+  {
     "url": "grid-optional.html",
     "revision": "13752b50d0f46e5e4eaf023435627345"
+  },
+  {
+    "url": "images/ikanbakar.jpg",
+    "revision": "5257f9bdc93f8152f0971fcf66702249"
   },
   {
     "url": "images/photo.jpeg",
     "revision": "0048a7e05c2b89c297ccc10dee465e20"
   },
   {
+    "url": "images/restospanyol.jpg",
+    "revision": "59a570b6a665b3d5d8f2f570e5df1f9e"
+  },
+  {
+    "url": "images/seafood.jpg",
+    "revision": "b7088ead398c2f2b87d653801fa368ea"
+  },
+  {
+    "url": "images/steak.jpg",
+    "revision": "f73233067f5f56a2e20a9ab59d5a4cf2"
+  },
+  {
+    "url": "images/warkop.jpg",
+    "revision": "d473729f8d7994f03b62e17479c64db5"
+  },
+  {
     "url": "index.html",
-    "revision": "b57e56c2b921fbee9af91876c8384edd"
+    "revision": "3ce04331e8b724ec668345f961fb43f1"
   },
   {
     "url": "js/add2numbers.js",
@@ -57,7 +81,7 @@ self.__precacheManifest = [
   },
   {
     "url": "map.html",
-    "revision": "bc0a356a1882bae410bd6d73545ba216"
+    "revision": "e379a0785d0fa58145ce95a1352aff96"
   },
   {
     "url": "project2/css/peta.css",
@@ -65,7 +89,7 @@ self.__precacheManifest = [
   },
   {
     "url": "project2/js/peta.js",
-    "revision": "51d53901282a6f912e6c0f1f257db3bd"
+    "revision": "75d92b28b10d110ef0976994d1193142"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

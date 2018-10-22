@@ -1,30 +1,46 @@
-var longlat = [-7.358354, 112.609767];
-const places = [
-    { loc: [-7.359985, 112.626317], name: 'Warung' },
-    { loc: [-7.358354, 112.609767], name: 'Nusendra.com' },
-    { loc: [-7.347716, 112.621662], name: 'Masjid' },
-    { loc: [-7.358354, 112.618767], name: 'Diskotik' }
-];
+let gmb = document.getElementById("gmb");
+let rev = document.getElementById("review");
+let img = document.createElement('img');
+let par = document.createElement('p');
+gmb.appendChild(img);
+rev.appendChild(par);
 
-var mymap = L.map('mapid').setView(longlat, 13);
-for (var p of places) {
-    var marker =
-        L.marker(p.loc).addTo(mymap)
-            .bindPopup(p.name);
+function findLocation(x, y) {
+    // console.log(x,y);
+    for (var i = 0; i < places.length; i++) {
+        if (places[i].lokasi[0] == x &&
+            places[i].lokasi[1] == y) {
+            return i;
+        }
+    }
+    return -1;
 }
-// L.marker(longlat).addTo(mymap).bindPopup('Nusendra.com');
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoibnVzZW5kcmEiLCJhIjoiY2ptNXBzZjJ3MGhzdjN2cnRlMnQzMXViMCJ9.e4QkJogqpJuL6rzcb-Ilew'
-}).addTo(mymap);
 
-mymap.on('click', onMapClick);
+function showLocation(e) {
+    console.log("you clicked " + e.latlng.lat + " dan " + e.latlng.lng);
+    let ix = findLocation(e.latlng.lat, e.latlng.lng);
+    if (ix >= 0) {
+        img.src = places[ix].gambar;
+        par.textContent = places[ix].review;
+    }
+}
 
-var popup = L.popup();
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("Lokasi yang dipilih: " + e.latlng.toString())
-        .openOn(mymap);
+(async function () {
+    const URL = "../data/peta.json";
+    try {
+        let resp = await (fetch(URL));
+        let resp2 = await resp.json();
+        localStorage.setItem('places', JSON.stringify(resp2.places));
+    }
+    catch (err) {
+        console.log(err);
+    }
+})();
+
+let places = JSON.parse(localStorage.getItem('places'));
+
+for (var p of places) {
+    var marker = L.marker(p.lokasi).addTo(mymap)
+        .bindPopup(p.sponsor);
+    marker.on('click', showLocation);
 }

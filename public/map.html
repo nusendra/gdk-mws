@@ -25,6 +25,23 @@
         </div>
     </div>
 </body>
+
+<script>
+    var longlat = [-7.358354, 112.609767];
+    var mymap = L.map('mapid').setView(longlat, 13);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1IjoibnVzZW5kcmEiLCJhIjoiY2ptNXBzZjJ3MGhzdjN2cnRlMnQzMXViMCJ9.e4QkJogqpJuL6rzcb-Ilew'
+    }).addTo(mymap);
+</script>
 <script src="project2/js/peta.js"></script>
 
 </html>
+
+<style>
+img {
+    width: 100%;
+    height: 100%;
+}
+</style>
